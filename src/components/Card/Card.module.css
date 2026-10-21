@@ -1,0 +1,23 @@
+.card_container{
+    background-color: #fdfdfd;
+    width: 20%;
+    border: 1px solid #dcdcdc;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.05);
+}
+
+.title{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.message{
+    font-size: .9rem;
+}
+
