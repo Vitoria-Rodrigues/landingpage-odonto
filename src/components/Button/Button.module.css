@@ -1,0 +1,26 @@
+.btn{
+    font-weight: 500;
+    font-size: var(--btn-font-size, clamp(0.8125rem, 0.75rem + 0.25vw, 1rem));
+    gap: 0.5rem;
+    text-align: center;
+    background-color: var(--btn-bgColor, #C88143);
+    color: #fff;
+    border: none;
+    border-radius: .3rem;
+    padding: var(--btn-padding, clamp(0.45rem, 0.38rem + 0.3vw, 0.65rem) clamp(0.75rem, 0.6rem + 0.5vw, 1.25rem));
+    width: var(--btn-width, auto);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: filter 0.2s ease;
+}
+
+.btn:hover{
+    filter: brightness(1.1);
+}
+
+.btn_icon{
+    font-size: 1rem;
+}
