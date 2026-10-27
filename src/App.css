@@ -1,0 +1,287 @@
+.container{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100dvh;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #fdfdfd;
+}
+
+.header{
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(0.5rem, 1.5vw, 1.5rem);
+    padding: clamp(0.75rem, 0.5rem + 1vw, 1.25rem) clamp(1rem, 3.5vw, 5rem);
+}
+
+.header img{
+    height: clamp(1.875rem, 1.5rem + 1vw, 2.5rem);
+    max-width: 48%;
+    object-fit: contain;
+}
+
+.header .header-btn{
+    --btn-font-size: clamp(0.7rem, 0.62rem + 0.35vw, 0.95rem);
+    --btn-padding: clamp(0.4rem, 0.35rem + 0.25vw, 0.65rem) clamp(0.6rem, 0.45rem + 0.6vw, 1.25rem);
+    font-size: var(--btn-font-size);
+    padding: var(--btn-padding);
+    min-height: clamp(2.25rem, 2rem + 0.8vw, 2.75rem);
+    line-height: 1.25;
+    text-align: center;
+    text-wrap: balance;
+    max-width: 13.5rem;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.principal{
+    background-color: #00576A;
+    width: min(92%, 62.5rem); 
+    min-height: 33rem;       
+    height: auto; 
+    display: grid;
+    border-radius: 0.6rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 2.5rem;
+    margin-top: 3rem;
+    gap: 1rem;
+}
+
+.left-side,
+.right-side{
+    display: flex;
+    color: #fff;
+    height: 100%;
+    min-height: 28rem;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 1.2rem;
+}
+
+.title-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.title{
+    color: #ffd500;
+    font-size: clamp(1.65rem, 1.35rem + 1vw, 2.75rem);
+}
+
+.message-title{
+    font-size: clamp(.85rem, 0.85rem + 0.25vw, 1.1rem);
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.title-form{
+    font-size: clamp(1.125rem, 1.05rem + 0.4vw, 1.35rem);
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.name, .cpf, .email, .phone{
+    width: 100%; 
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.link{
+    width: 100%; 
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    font-size: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+}
+
+input{
+    padding: .4rem .8rem;
+    border-radius: .3rem;
+    border: none;
+}
+
+.copy-area{
+    background-color: #fff;
+}
+
+a{
+    margin-top: 1rem;
+    color: #fff;
+    text-decoration: none;
+    align-self: center;
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+    text-align: center;
+}
+
+.cards{
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem 0;
+    margin-bottom: 3rem;
+}
+
+.cards h3{
+    font-size: clamp(1.5rem, 1.35rem + 0.75vw, 2rem);
+    color: #ffd501;
+    margin-top: 1.2rem;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap; 
+    padding: 0 1.5rem;
+  }
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 clamp(1.5rem, 6vw, 7rem) 3rem clamp(1.5rem, 6vw, 7rem);
+    margin-top: 2rem;
+}
+
+.clinic-hours{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.clinic-hours img{
+    height: min(35px, 50px);
+    margin-bottom: 1.2rem;
+}
+
+.workhours{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    font-size: clamp(.8rem, 0.85rem + 0.25vw, 1.125rem);
+    font-weight: 500;
+}
+
+.clinic-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: .4rem;
+}
+
+.clinic-contact h3{
+    font-size: clamp(1.5rem, 1.35rem + 0.75vw, 2rem);
+    font-weight: 900;
+    color: #101010;
+}
+
+.contact-icons{
+    display: flex;
+    gap: .4rem;
+    cursor: pointer;
+}
+
+.clinic-contact p {
+    font-size: clamp(.8rem, 0.85rem + 0.25vw, 1.125rem);
+    font-weight: 500;
+}
+
+@media (min-width: 36rem) {
+    .header .header-btn{
+        max-width: none;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 64rem) {
+    main{
+        gap: 2.5rem;
+    }
+
+    .principal {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 48rem) {
+    .principal{
+        grid-template-columns: 1fr;
+        min-height: auto;
+        gap: 2.5rem;
+    }
+
+    .left-side,
+    .right-side {
+        min-height: auto;
+        height: auto;
+        padding: 0;
+    }
+
+    .footer-container {
+        margin-top: 1.5rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 30rem) {
+    .principal{
+        width: 94%;
+        padding: 1.5rem 1.2rem;
+        margin-top: 1rem;
+        border-radius: 0.5rem;
+    }
+
+    .name, .cpf, .email, .phone, .link {
+        max-width: 100%;
+    }
+
+    .cards-container {
+        padding: 0 1rem;
+    }
+
+    .footer {
+        padding-inline: 1rem;
+        gap: 2rem;
+    }
+
+}
