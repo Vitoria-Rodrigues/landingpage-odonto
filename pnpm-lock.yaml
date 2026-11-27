@@ -4,55 +4,112 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    '@types/node':
+      specifier: ^24.19.2
+      version: 24.19.2
+    typescript:
+      specifier: ^6.0.3
+      version: 6.0.3
+  plugins-stack:
+    '@vitoria-rodrigues/agent-mesh':
+      specifier: github:Vitoria-Rodrigues/agent-mesh
+      version: 1.2.0
+  tooling-stack:
+    '@eslint/js':
+      specifier: ^10.0.1
+      version: 10.0.1
+    eslint:
+      specifier: ^10.13.0
+      version: 10.13.0
+    eslint-plugin-react-hooks:
+      specifier: ^7.1.1
+      version: 7.1.1
+    eslint-plugin-react-refresh:
+      specifier: ^0.5.7
+      version: 0.5.7
+    globals:
+      specifier: ^17.13.0
+      version: 17.13.0
+    typescript-eslint:
+      specifier: ^8.71.2
+      version: 8.72.0
+  web-stack:
+    '@types/react':
+      specifier: ^19.3.0
+      version: 19.3.0
+    '@types/react-dom':
+      specifier: ^19.3.0
+      version: 19.3.0
+    '@vitejs/plugin-react':
+      specifier: ^6.1.2
+      version: 6.1.2
+    react:
+      specifier: ^19.3.1
+      version: 19.3.1
+    react-dom:
+      specifier: ^19.3.1
+      version: 19.3.1
+    react-icons:
+      specifier: ^5.7.0
+      version: 5.7.0
+    vite:
+      specifier: ^8.3.4
+      version: 8.3.4
+
 importers:
 
   .:
     dependencies:
       react:
-        specifier: ^19.3.1
+        specifier: catalog:web-stack
         version: 19.3.1
       react-dom:
-        specifier: ^19.3.1
+        specifier: catalog:web-stack
         version: 19.3.1(react@19.3.1)
       react-icons:
-        specifier: ^5.7.0
+        specifier: catalog:web-stack
         version: 5.7.0(react@19.3.1)
     devDependencies:
       '@eslint/js':
-        specifier: ^10.0.1
+        specifier: catalog:tooling-stack
         version: 10.0.1(eslint@10.13.0)
       '@types/node':
-        specifier: ^24.19.2
+        specifier: 'catalog:'
         version: 24.19.2
       '@types/react':
-        specifier: ^19.3.0
+        specifier: catalog:web-stack
         version: 19.3.0
       '@types/react-dom':
-        specifier: ^19.3.0
+        specifier: catalog:web-stack
         version: 19.3.0(@types/react@19.3.0)
       '@vitejs/plugin-react':
-        specifier: ^6.1.2
+        specifier: catalog:web-stack
         version: 6.1.2(vite@8.3.4(@types/node@24.19.2))
+      '@vitoria-rodrigues/agent-mesh':
+        specifier: catalog:plugins-stack
+        version: https://codeload.github.com/Vitoria-Rodrigues/agent-mesh/tar.gz/05612cab5d6a69f1ec486ad419b8696f0a2a4a64
       eslint:
-        specifier: ^10.13.0
+        specifier: catalog:tooling-stack
         version: 10.13.0
       eslint-plugin-react-hooks:
-        specifier: ^7.1.1
+        specifier: catalog:tooling-stack
         version: 7.1.1(eslint@10.13.0)
       eslint-plugin-react-refresh:
-        specifier: ^0.5.7
+        specifier: catalog:tooling-stack
         version: 0.5.7(eslint@10.13.0)
       globals:
-        specifier: ^17.13.0
+        specifier: catalog:tooling-stack
         version: 17.13.0
       typescript:
-        specifier: ^6.0.3
+        specifier: 'catalog:'
         version: 6.0.3
       typescript-eslint:
-        specifier: ^8.71.2
+        specifier: catalog:tooling-stack
         version: 8.72.0(eslint@10.13.0)(typescript@6.0.3)
       vite:
-        specifier: ^8.3.4
+        specifier: catalog:web-stack
         version: 8.3.4(@types/node@24.19.2)
 
 packages:
@@ -410,6 +467,10 @@ packages:
         optional: true
       oxc-transform-react:
         optional: true
+
+  '@vitoria-rodrigues/agent-mesh@https://codeload.github.com/Vitoria-Rodrigues/agent-mesh/tar.gz/05612cab5d6a69f1ec486ad419b8696f0a2a4a64':
+    resolution: {tarball: https://codeload.github.com/Vitoria-Rodrigues/agent-mesh/tar.gz/05612cab5d6a69f1ec486ad419b8696f0a2a4a64}
+    version: 1.2.0
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -1296,6 +1357,8 @@ snapshots:
     dependencies:
       '@rolldown/pluginutils': 1.0.1
       vite: 8.3.4(@types/node@24.19.2)
+
+  '@vitoria-rodrigues/agent-mesh@https://codeload.github.com/Vitoria-Rodrigues/agent-mesh/tar.gz/05612cab5d6a69f1ec486ad419b8696f0a2a4a64': {}
 
   acorn-jsx@5.3.2(acorn@8.19.0):
     dependencies:

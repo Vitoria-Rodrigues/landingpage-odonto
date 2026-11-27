@@ -1,8 +1,9 @@
 {
-  "name": "landingpage-odonto",
+  "name": "@vitoria-rodrigues/landingpage-odonto",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "packageManager": "pnpm@10.33.2",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -10,22 +11,23 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^19.3.1",
-    "react-dom": "^19.3.1",
-    "react-icons": "^5.7.0"
+    "react": "catalog:web-stack",
+    "react-dom": "catalog:web-stack",
+    "react-icons": "catalog:web-stack"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@types/node": "^24.19.2",
-    "@types/react": "^19.3.0",
-    "@types/react-dom": "^19.3.0",
-    "@vitejs/plugin-react": "^6.1.2",
-    "eslint": "^10.13.0",
-    "eslint-plugin-react-hooks": "^7.1.1",
-    "eslint-plugin-react-refresh": "^0.5.7",
-    "globals": "^17.13.0",
-    "typescript": "^6.0.3",
-    "typescript-eslint": "^8.71.2",
-    "vite": "^8.3.4"
+    "@eslint/js": "catalog:tooling-stack",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:web-stack",
+    "@types/react-dom": "catalog:web-stack",
+    "@vitejs/plugin-react": "catalog:web-stack",
+    "@vitoria-rodrigues/agent-mesh": "catalog:plugins-stack",
+    "eslint": "catalog:tooling-stack",
+    "eslint-plugin-react-hooks": "catalog:tooling-stack",
+    "eslint-plugin-react-refresh": "catalog:tooling-stack",
+    "globals": "catalog:tooling-stack",
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:tooling-stack",
+    "vite": "catalog:web-stack"
   }
 }
