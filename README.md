@@ -1,4 +1,4 @@
-# Joyce Martins Odontologia - Referral Landing Page
+# Joyce Martins Odontologia - Referral Landing Page (`@vitoria-rodrigues/landingpage-odonto`)
 
 A responsive referral and loyalty landing page for Joyce Martins Odontologia, built with React, TypeScript, and fluid CSS design principles.
 
@@ -6,12 +6,13 @@ A responsive referral and loyalty landing page for Joyce Martins Odontologia, bu
 
 ## Technology Stack
 
-- Runtime and Framework: React 19.3
-- Language: TypeScript 6.0
-- Build Tool: Vite 8.3
-- Styling Architecture: Plain CSS, CSS Modules, and fluid `clamp()` utilities
-- Icons: React Icons 5.7
-- Linter: ESLint 10
+- **Runtime and Framework**: React 19.3
+- **Language**: TypeScript 6.0
+- **Build Tool**: Vite 8.3
+- **Styling Architecture**: Plain CSS, CSS Modules, and fluid `clamp()` utilities
+- **Icons**: React Icons 5.7
+- **Linter**: ESLint 10
+- **Package Management**: pnpm 10 with `catalogMode: strict`
 
 ---
 
@@ -73,12 +74,12 @@ flowchart TD
 ### Prerequisites
 
 - Node.js (version 20 or higher recommended)
-- pnpm (version 9 or higher)
+- pnpm (version 10 or higher)
 
 ### Installation
 
 1. Clone the repository to your local environment.
-1. Install project dependencies:
+2. Install project dependencies:
 
 ```bash
 pnpm install
@@ -143,27 +144,50 @@ The application relies on continuous fluid scaling using CSS `clamp()` functions
 
 ```text
 landingpage-odonto/
-|-- public/
-|   |-- favicon.svg
-|   `-- icons.svg
-|-- src/
-|   |-- assets/
-|   |   `-- img/
-|   |       `-- logo-joyce-martins.png
-|   |-- components/
-|   |   |-- Button/
-|   |   |   |-- Button.tsx
-|   |   |   `-- Button.module.css
-|   |   `-- Card/
-|   |       |-- Card.tsx
-|   |       `-- Card.module.css
-|   |-- App.css
-|   |-- App.tsx
-|   |-- index.css
-|   `-- main.tsx
-|-- eslint.config.js
-|-- index.html
-|-- package.json
-|-- tsconfig.json
-`-- vite.config.ts
+├── .agents/
+│   └── plugins.json              # Antigravity plugin registry (@vitoria-rodrigues/agent-mesh)
+├── public/
+│   ├── favicon.svg
+│   └── icons.svg
+├── src/
+│   ├── assets/
+│   │   └── img/
+│   │       └── logo-joyce-martins.png
+│   ├── components/
+│   │   ├── Button/
+│   │   │   ├── Button.tsx
+│   │   │   └── Button.module.css
+│   │   └── Card/
+│   │       ├── Card.tsx
+│   │       └── Card.module.css
+│   ├── App.css
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+├── AGENTS.md                     # Sovereign root context router (Layer 1)
+├── eslint.config.js
+├── index.html
+├── package.json                  # Scoped manifest (@vitoria-rodrigues/landingpage-odonto)
+├── pnpm-lock.yaml
+├── pnpm-workspace.yaml           # Centralized pnpm dependency catalogs
+├── README.md
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
 ```
+
+---
+
+## AI Agent Mesh Integration
+
+This repository consumes organizational AI agent skills, rules, and MCP configurations via `@vitoria-rodrigues/agent-mesh` declared in `catalog:plugins-stack` ([pnpm-workspace.yaml](./pnpm-workspace.yaml)) and mounted through [.agents/plugins.json](./.agents/plugins.json).
+
+---
+
+## Governance Standards
+
+1. **Conventional Commits**: All commits must follow `<type>(<scope>): <description>` (v1.0.0).
+2. **Cryptographic Signing**: Sign commits with SSH (`git commit -S -m "..."`) when a signing key is configured.
+3. **Zero-Emoji Invariant**: Emojis are strictly prohibited in code, documentation, and commit messages.
+4. **Language Policy**: Technical documentation, code, and commit messages are written strictly in en-US.
